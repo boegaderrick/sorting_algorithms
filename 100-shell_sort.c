@@ -7,13 +7,13 @@
  */
 void shell_sort(int *array, size_t size)
 {
-	size_t temp, gap = 1 * 3 + 1;
+	size_t temp, gap = 1;
 	int i, j, len = size;
 
 	if (size < 2)
 		return;
 
-	for (gap = 1; gap < (size / 3);)
+	while (gap < (size / 3))
 		gap = gap * 3 + 1;
 
 	while (gap >= 1)

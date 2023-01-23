@@ -32,16 +32,14 @@ size_t partition(int *array, size_t lb, size_t ub, size_t size)
 		}
 		i++;
 	}
-	/**
-	 * if (array[j] != array[piv])
-	 * if (j != piv)
-	 * {
-	 */
-	temp = array[j];
-	array[j] = array[piv];
-	array[piv] = temp;
-	if (j != piv)
+	if (j < piv)
+	{
+		temp = array[j];
+		array[j] = array[piv];
+		array[piv] = temp;
+		/*if (j != piv)*/
 		print_array(array, size);
+	}
 	return (j);
 }
 
