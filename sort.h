@@ -30,5 +30,6 @@ void quick_sort(int *array, size_t size);
 int partition(int *array, int lb, int ub, int size);
 void sort(int *array, size_t lb, size_t ub, size_t size);
 void shell_sort(int *array, size_t size);
+void cocktail_sort_list(listint_t **list);
 
 #endif /* SORT_H */
