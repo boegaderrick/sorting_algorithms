@@ -9,9 +9,9 @@
  *
  * Return: middle index of the partitioned array
  */
-size_t partition(int *array, size_t lb, size_t ub, size_t size)
+int partition(int *array, int lb, int ub, int size)
 {
-	size_t piv = ub, i = lb, j = piv, temp;
+	int piv = ub, i = lb, j = piv, temp;
 
 	while (i < ub)
 	{
@@ -32,14 +32,11 @@ size_t partition(int *array, size_t lb, size_t ub, size_t size)
 		}
 		i++;
 	}
-	if (j < piv)
-	{
-		temp = array[j];
-		array[j] = array[piv];
-		array[piv] = temp;
-		/*if (j != piv)*/
+	temp = array[j];
+	array[j] = array[piv];
+	array[piv] = temp;
+	if (j != piv)
 		print_array(array, size);
-	}
 	return (j);
 }
 
@@ -52,7 +49,7 @@ size_t partition(int *array, size_t lb, size_t ub, size_t size)
  */
 void sort(int *array, size_t lb, size_t ub, size_t size)
 {
-	size_t border;
+	int border;
 
 	if (lb < ub)
 	{
