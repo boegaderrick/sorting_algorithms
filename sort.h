@@ -5,6 +5,7 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * struct listint_s - Doubly linked list node
@@ -31,5 +32,6 @@ int partition(int *array, int lb, int ub, int size);
 void sort(int *array, size_t lb, size_t ub, size_t size);
 void shell_sort(int *array, size_t size);
 void cocktail_sort_list(listint_t **list);
+void counting_sort(int *array, size_t size);
 
 #endif /* SORT_H */
