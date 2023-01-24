@@ -34,7 +34,10 @@ void counting_sort(int *array, size_t size)
 	print_array(counter, largest);
 
 	for (i = 0; i < size; i++)
-		array[counter[dup[i] - 1]] = dup[i];
+	{
+		array[counter[dup[i]] - 1] = dup[i];
+		counter[dup[i]]--;
+	}
 
 	free(counter);
 	free(dup);
