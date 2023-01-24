@@ -50,7 +50,7 @@ void merge(int *array, int *temp, int l, int mid, int h)
 	for (; j < h; j++)
 		temp[k++] = array[j];
 
-	printf("[done]: ");
+	printf("[Done]: ");
 	output(temp, l, h);
 	for (i = l; i < h; i++)
 		array[i] = temp[i];
