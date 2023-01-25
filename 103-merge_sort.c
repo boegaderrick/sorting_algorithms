@@ -83,9 +83,13 @@ void sort_r(int *array, int *temp, int l, int h)
  */
 void merge_sort(int *array, size_t size)
 {
-	int *temp = calloc(size, sizeof(int));
+	int *temp;
 
-	if (size < 2 || !temp)
+	if (!array || size < 2)
+		return;
+
+	temp = calloc(size, sizeof(int));
+	if (!temp)
 		return;
 
 	sort_r(array, temp, 0, size);
