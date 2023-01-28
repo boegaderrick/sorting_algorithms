@@ -1,11 +1,13 @@
 #ifndef SORT_H
 #define SORT_H
+#define _GNU_SOURCE
 
 /* HEADER FILES */
 #include <stddef.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * struct listint_s - Doubly linked list node
@@ -35,5 +37,6 @@ void cocktail_sort_list(listint_t **list);
 void counting_sort(int *array, size_t size);
 void merge_sort(int *array, size_t size);
 void heap_sort(int *array, size_t size);
+void radix_sort(int *array, size_t size);
 
 #endif /* SORT_H */
